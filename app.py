@@ -1,15 +1,20 @@
 import pygame
 from pygame.locals import *
+from screen import Screen
 
 class App:
     def __init__(self):
         self._running = True
         self._display_surf = None
 
+        self.ordering_screen = Screen('Ordering')
+
     def on_init(self):
         pygame.init() #starts pygame module
         self._display_surf = pygame.display.set_mode((1000,700), pygame.HWSURFACE | pygame.DOUBLEBUF)
         self._running = True
+
+        self.ordering_screen.make_current_screen()
 
     def on_event(self, event):
         if event.type == pygame.QUIT:
@@ -19,7 +24,7 @@ class App:
         pass
 
     def on_render(self):
-        pass
+        self.ordering_screen.screen_update()
 
     def on_cleanup(self):
         pygame.quit()
