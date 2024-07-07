@@ -1,13 +1,14 @@
 import pygame
 from pygame.locals import *
 from screen import Screen
+from ordering import OrderingScreen
 
 class App:
     def __init__(self):
         self._running = True
         self._display_surf = None
 
-        self.ordering_screen = Screen('Ordering')
+        self.ordering_screen = OrderingScreen()
 
     def on_init(self):
         pygame.init() #starts pygame module
@@ -24,7 +25,7 @@ class App:
         pass
 
     def on_render(self):
-        self.ordering_screen.screen_update()
+        self.ordering_screen.display_current()
 
     def on_cleanup(self):
         pygame.quit()

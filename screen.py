@@ -26,6 +26,9 @@ class Screen:
     def screen_update(self):
         if self.is_current:
             self.screen.fill(self.fill)
+        
+    def update_color(self, fill):
+        self.fill = fill
 
 '''
 if __name__ == '__main__':
