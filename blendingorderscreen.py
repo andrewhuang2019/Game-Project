@@ -31,7 +31,7 @@ def main():
     while True:
         events = pygame.event.get()
         for event in events:
-            if event.trype == pygame.QUIT:
+            if event.type == pygame.QUIT:
                 pygame.quit()
                 sys.exit()
         
