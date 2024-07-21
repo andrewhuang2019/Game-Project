@@ -1,7 +1,14 @@
 import pygame
 from pygame.locals import *
-from screen import Screen
-from ordering import OrderingScreen
+
+from screens.screen import Screen
+from screens.blendingscreen import BlendingScreen
+from screens.ingredientscreen import IngredientScreen
+from screens.orderingscreen import OrderingScreen
+from screens.toppingscreen import ToppingScreen
+from screens.servingscreen import ServingScreen
+from screens.screenmanager import ScreenManager
+
 
 class App:
     def __init__(self):
@@ -9,6 +16,14 @@ class App:
         self._display_surf = None
 
         self.ordering_screen = OrderingScreen()
+        self.ingredient_screen = IngredientScreen()
+        self.blending_screen = BlendingScreen()
+        self.topping_screen = ToppingScreen()
+        self.serving_screen = ServingScreen()
+        
+        #self.screen_manager = ScreenManager()
+
+        
 
     def on_init(self):
         pygame.init() #starts pygame module
@@ -25,7 +40,7 @@ class App:
         pass
 
     def on_render(self):
-        self.ordering_screen.display_current()
+        self.ordering_screen.update_display()
 
     def on_cleanup(self):
         pygame.quit()
