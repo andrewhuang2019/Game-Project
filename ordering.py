@@ -6,7 +6,7 @@ class OrderingScreen:
     
     def __init__(self):
         self.screen = Screen('Ordering') #changing fill color from black
-        self.screen.update_color((35,58,96))
+        self.screen.update_color((218,194,238))
 
     def make_current_screen(self):
         self.screen.make_current_screen() #calling the method from screen.py
