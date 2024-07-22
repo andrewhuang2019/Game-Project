@@ -23,13 +23,10 @@ class Screen:
     def get_current(self):
         return self.is_current 
     
-    def screen_update(self):
-        if self.is_current:
-            self.screen.fill(self.fill)
-
     def update_display(self):
-        self.screen_update() #maintaining the screen
-        pygame.display.flip() #refreshes the screen update to get new colors
+        if self.is_current:
+            self.screen.fill(self.fill) #maintaining the screen
+            pygame.display.flip() #refreshes the screen update to get new colors
         
     def update_color(self, fill):
         self.fill = fill

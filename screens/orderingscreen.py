@@ -1,6 +1,7 @@
 import pygame
 from pygame.locals import *
 from screens.screen import Screen
+from button import Button
 
 #define colors
 white = (255, 255, 255)
@@ -16,11 +17,17 @@ class OrderingScreen(Screen):
         super().update_color(red)
 
         self.rectangle = pygame.Rect(200, 200, 100, 100)
+        self.ingredient_button = Button(200, 100, 75, 75, "I", blue, green)
 
     def update_display(self):
-        self.screen_update() #maintaining the screen
+        
+        self.screen.fill(self.fill)
         pygame.draw.rect(self.screen, blue, self.rectangle)
+        self.ingredient_button.draw(self.screen)
         pygame.display.flip() #refreshes the screen update to get new colors
+
+    def ingredient_button_is_clicked(self, event):
+        return self.ingredient_button.is_clicked(event)
     
 
     
