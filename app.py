@@ -3,7 +3,7 @@ from pygame.locals import *
 
 from screens.screen import Screen
 from screens.blendingscreen import BlendingScreen
-from screens.ingredientscreen import IngredientScreen
+from screens.buildingscreen import BuildingScreen
 from screens.orderingscreen import OrderingScreen
 from screens.toppingscreen import ToppingScreen
 from screens.servingscreen import ServingScreen
@@ -19,7 +19,7 @@ class App:
         pygame.init() #starts pygame module
 
         self.ordering_screen = OrderingScreen()
-        self.ingredient_screen = IngredientScreen()
+        self.building_screen = BuildingScreen()
         self.blending_screen = BlendingScreen()
         self.topping_screen = ToppingScreen()
         self.serving_screen = ServingScreen()
@@ -34,8 +34,8 @@ class App:
     def on_event(self, event):
         if event.type == pygame.QUIT:
             self._running = False
-        if self.ordering_screen.ingredient_button_is_clicked(event):
-            self.ingredient_screen.make_current_screen()
+        if self.ordering_screen.building_button_is_clicked(event):
+            self.building_screen.make_current_screen()
             self.ordering_screen.end_current_screen()
 
     def on_loop(self):
@@ -44,8 +44,8 @@ class App:
     def on_render(self):
         if self.ordering_screen.is_current:
             self.ordering_screen.update_display()
-        if self.ingredient_screen.is_current:
-            self.ingredient_screen.update_display()
+        if self.building_screen.is_current:
+            self.building_screen.update_display()
 
     def on_cleanup(self):
         pygame.quit()

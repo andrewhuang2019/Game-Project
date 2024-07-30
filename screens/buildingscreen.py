@@ -10,8 +10,8 @@ green = (0, 255, 0)
 red = (255, 0, 0)
 black = (0, 0, 0)
 
-class IngredientScreen(Screen): #next screen where we create the base of the order
+class BuildingScreen(Screen): #next screen where we create the base of the order
     def __init__(self):
-        super().__init__('Ingredient')
+        super().__init__('Building')
         super().update_color(green)
     

@@ -19,10 +19,10 @@ pygame.display.set_caption('Button Example')
 class Button: #rectangular button
     def __init__(self, x, y, width, height, text, color, hover_color, shape='rect'):
         self.rect = pygame.Rect(x, y, width, height) #creates new rectangle we're storing w/attributes
-        self.circ = (x, y) if shape == 'circle' else None
+        #self.circ = (x, y) if shape == 'circle' else None
         self.text = text
         self.color = color
-        self.shape = shape
+        #self.shape = shape
         self.hover_color = hover_color
         self.font = pygame.font.Font(None, 36) #None is default font and 36 is how big
         self.text_surf = self.font.render(text, True, white)
@@ -43,7 +43,7 @@ class Button: #rectangular button
         if event.type == pygame.MOUSEBUTTONDOWN:
             if self.rect.collidepoint(event.pos):
                 return True
-            elif self.circ.collidepoint(event.pos):
+            #elif self.circ.collidepoint(event.pos):
                 distance = math.sqrt((event.pos[0] - self.circ[0])**2 + (event.pos[1] - self.circ[1])**2)
                 if distance <= self.radius:
                     return True
