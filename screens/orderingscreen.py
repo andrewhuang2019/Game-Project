@@ -44,7 +44,7 @@ class OrderingScreen(Screen):
     def topping_button_is_clicked(self, event):
         return self.topping_botton.is_clicked(event)
     
-    def serving_button_is_clicked(self, event);
+    def serving_button_is_clicked(self, event):
         return self.serving_button.is_clicked(event)
     
 
