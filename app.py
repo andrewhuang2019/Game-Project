@@ -38,7 +38,7 @@ class App:
         self.screen_manager.is_blending_button_clicked(self.blending_screen, event)
         self.screen_manager.is_topping_button_clicked(self.topping_screen, event)
         self.screen_manager.is_building_button_clicked(self.building_screen, event)
-        self.screen_manager.is_serving_button_clicked(self.serving_screen, event)
+        self.screen_manager.is_ordering_button_clicked(self.ordering_screen, event)
 
         '''
         if self.ordering_screen.building_button_is_clicked(event):
