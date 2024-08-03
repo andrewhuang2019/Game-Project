@@ -16,7 +16,7 @@ class OrderingScreen(Screen):
         super().__init__('Ordering')
         super().update_color(red)
 
-    def update_display(self):
+    '''def update_display(self):
         
         self.screen.fill(self.fill)
         #pygame.draw.rect(self.screen, blue, self.rectangle)
@@ -24,7 +24,7 @@ class OrderingScreen(Screen):
         self.blending_button.draw(self.screen)
         self.topping_botton.draw(self.screen)
         self.serving_button.draw(self.screen)
-        pygame.display.flip()
+        pygame.display.flip()'''
 
 
     

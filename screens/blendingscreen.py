@@ -18,7 +18,7 @@ class BlendingScreen(Screen): #screen where we blend their freezie
 
         #self.rectangle = pygame.Rect(200, 200, 100, 100)
 
-    def update_display(self):
+    '''def update_display(self):
         
         self.screen.fill(self.fill)
         #pygame.draw.rect(self.screen, blue, self.rectangle)
@@ -26,4 +26,4 @@ class BlendingScreen(Screen): #screen where we blend their freezie
         self.blending_button.draw(self.screen)
         self.topping_botton.draw(self.screen)
         self.serving_button.draw(self.screen)
-        pygame.display.flip()
+        pygame.display.flip()'''
