@@ -20,10 +20,10 @@ class Screen:
 
         self.is_current = False
 
-        self.building_button = Button(100, 160, 75, 75, "Building", blue, green)
-        self.blending_button = Button(200, 160, 75, 75, "Blending", blue, green)
-        self.topping_botton = Button(300, 160, 75, 75, "Topping", blue, green)
-        self.serving_button = Button(400, 160, 75, 75, "Serving", blue, green)
+        self.ordering_button = Button(100, 160, 75, 75, "Ordering", blue, green)
+        self.building_button = Button(200, 160, 75, 75, "Building", blue, green)
+        self.blending_button = Button(300, 160, 75, 75, "Blending", blue, green)
+        self.topping_button = Button(400, 160, 75, 75, "Topping", blue, green)
 
     def make_current_screen(self):
         pygame.display.set_caption(self.title)
@@ -41,8 +41,8 @@ class Screen:
             self.screen.fill(self.fill) #maintaining the screen
             self.building_button.draw(self.screen) #refreshes the screen update to get new colors
             self.blending_button.draw(self.screen)
-            self.topping_botton.draw(self.screen)
-            self.serving_button.draw(self.screen)
+            self.topping_button.draw(self.screen)
+            self.ordering_button.draw(self.screen)
             pygame.display.flip() #refreshes the screen update to get new colors
         
     def update_color(self, fill):
@@ -55,10 +55,10 @@ class Screen:
         return self.blending_button.is_clicked(event)
     
     def topping_button_is_clicked(self, event):
-        return self.topping_botton.is_clicked(event)
+        return self.topping_button.is_clicked(event)
     
-    def serving_button_is_clicked(self, event):
-        return self.serving_button.is_clicked(event)
+    def ordering_button_is_clicked(self, event):
+        return self.ordering_button.is_clicked(event)
 
 '''
 if __name__ == '__main__':

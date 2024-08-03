@@ -21,9 +21,9 @@ class ScreenManager:
             self.cur_screen.end_current_screen()
             self.cur_screen = topping_screen
     
-    def is_serving_button_clicked(self, serving_screen, event):
-        if self.cur_screen.serving_button_is_clicked(event):
-            serving_screen.make_current_screen()
+    def is_ordering_button_clicked(self, ordering_screen, event):
+        if self.cur_screen.ordering_button_is_clicked(event):
+            ordering_screen.make_current_screen()
             self.cur_screen.end_current_screen()
-            self.cur_screen = serving_screen
+            self.cur_screen = ordering_screen
     
