@@ -8,4 +8,4 @@ class ScreenManager:
             blending_screen.make_current_screen()
             self.cur_screen.end_current_screen()
             self.cur_screen = blending_screen
-
+    
