@@ -36,7 +36,6 @@ class App:
         if event.type == pygame.QUIT:
             self._running = False
         self.screen_manager.is_blending_button_clicked(self.blending_screen, event)
-
         self.screen_manager.is_topping_button_clicked(self.topping_screen, event)
         self.screen_manager.is_building_button_clicked(self.building_screen, event)
         self.screen_manager.is_serving_button_clicked(self.serving_screen, event)
@@ -76,7 +75,7 @@ class App:
 
         if self.serving_screen.is_current:
             self.serving_screen.update_display()
-            
+
         '''if self.blending_screen.is_current:
             self.blending_screen.update_display()
         if self.topping_screen.is_current:
