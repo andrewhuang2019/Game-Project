@@ -24,12 +24,13 @@ class App:
         self.topping_screen = ToppingScreen()
         self.serving_screen = ServingScreen()
 
-        #self.screen_manager = ScreenManager()
+        self.screen_manager = ScreenManager()
 
         self._display_surf = pygame.display.set_mode((1000,700), pygame.HWSURFACE | pygame.DOUBLEBUF)
         self._running = True
 
         self.ordering_screen.make_current_screen()
+        self.screen_manager.cur_screen = self.ordering_screen
 
     def on_event(self, event):
         if event.type == pygame.QUIT:
@@ -37,12 +38,15 @@ class App:
         if self.ordering_screen.building_button_is_clicked(event):
             self.building_screen.make_current_screen()
             self.ordering_screen.end_current_screen()
+
         elif self.building_screen.blending_button_is_clicked(event):
             self.blending_screen.make_current_screen()
             self.building_screen.end_current_screen()
+
         elif self.blending_screen.topping_button_is_clicked(event):
             self.topping_screen.make_current_screen()
             self.blending_screen.end_current_screen()
+
         elif self.topping_screen.serving_button_is_clicked(event):
             self.serving_screen.make_current_screen()
             self.topping_screen.end_current_screen()

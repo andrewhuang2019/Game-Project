@@ -1,24 +1,11 @@
 
 class ScreenManager:
     def __init__(self):
-        self.screens = {}
         self.cur_screen = None
-    
-    def add_screen(self, name, screen):
-        self.screens[name] = screen
-    
-    def set_screen(self, name):
-        self.cur_screen = self.screens.get(name)
-    
-    def handle_events(self, events):
-        if self.cur_screen:
-            self.cur_screen.handle_events(events)
-    
-    def update(self):
-        if self.cur_screen:
-            self.cur_screen.update()
-    
-    def draw(self, screen):
-        if self.cur_screen:
-            self.cur_screen.draw(screen)
+
+    def is_blending_button_clicked(self, blending_screen):
+        if self.cur_screen.blending_button_is_clicked():
+            blending_screen.make_current_screen()
+            self.cur_screen.end_current_screen()
+            self.cur_screen = blending_screen
 
