@@ -17,10 +17,10 @@ class OrderingScreen(Screen):
         super().update_color(red)
 
         self.rectangle = pygame.Rect(200, 200, 100, 100)
-        self.building_button = Button(200, 100, 75, 75, "Building", blue, green)
-        self.blending_button = Button(200, 100, 75, 75, "Blending", blue, green)
-        self.topping_botton = Button(200, 100, 75, 75, "Topping", blue, green)
-        self.serving_button = Button(200, 100, 75, 75, "Serving", blue, green)
+        self.building_button = Button(200, 160, 75, 75, "Building", blue, green)
+        self.blending_button = Button(200, 230, 75, 75, "Blending", blue, green)
+        self.topping_botton = Button(200, 160, 75, 75, "Topping", blue, green)
+        self.serving_button = Button(200, 160, 75, 75, "Serving", blue, green)
 
     def update_display(self):
         

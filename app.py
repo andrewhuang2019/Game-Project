@@ -37,6 +37,15 @@ class App:
         if self.ordering_screen.building_button_is_clicked(event):
             self.building_screen.make_current_screen()
             self.ordering_screen.end_current_screen()
+        elif self.building_screen.blending_button_is_clicked(event):
+            self.blending_screen.make_current_screen()
+            self.building_screen.end_current_screen()
+        elif self.blending_screen.topping_button_is_clicked(event):
+            self.topping_screen.make_current_screen()
+            self.blending_screen.end_current_screen()
+        elif self.topping_screen.serving_button_is_clicked(event):
+            self.serving_screen.make_current_screen()
+            self.topping_screen.end_current_screen()
 
     def on_loop(self):
         pass
@@ -46,6 +55,12 @@ class App:
             self.ordering_screen.update_display()
         if self.building_screen.is_current:
             self.building_screen.update_display()
+        '''if self.blending_screen.is_current:
+            self.blending_screen.update_display()
+        if self.topping_screen.is_current:
+            self.topping_screen.update_display
+        if self.serving_screen.is_current:
+            self.serving_screen.update_display'''
 
     def on_cleanup(self):
         pygame.quit()
