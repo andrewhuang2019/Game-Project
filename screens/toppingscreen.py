@@ -13,4 +13,4 @@ black = (0, 0, 0)
 class ToppingScreen(Screen): #screen where we add the toppings
     def __init__(self):
         super().__init__('Topping')
-        super().update_color(blue)
+        #super().update_color(blue)

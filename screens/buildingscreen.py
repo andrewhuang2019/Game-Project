@@ -13,5 +13,5 @@ black = (0, 0, 0)
 class BuildingScreen(Screen): #next screen where we create the base of the order
     def __init__(self):
         super().__init__('Building')
-        super().update_color(green)
+        #super().update_color(green)
     

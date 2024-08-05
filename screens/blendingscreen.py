@@ -14,7 +14,7 @@ black = (0, 0, 0)
 class BlendingScreen(Screen): #screen where we blend their freezie
     def __init__(self):
         super().__init__('Blending')
-        super().update_color(white)
+        #super().update_color(white)
 
         #self.rectangle = pygame.Rect(200, 200, 100, 100)
 

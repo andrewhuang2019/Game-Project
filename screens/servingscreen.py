@@ -13,5 +13,5 @@ black = (0, 0, 0)
 class ServingScreen(Screen): #screen where we serve it to the customer
     def __init__(self):
         super().__init__('Serving')
-        super().update_color(black)
+        #super().update_color(black)
     

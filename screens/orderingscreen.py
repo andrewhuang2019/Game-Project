@@ -14,7 +14,7 @@ class OrderingScreen(Screen):
     
     def __init__(self):
         super().__init__('Ordering')
-        super().update_color(red)
+        #super().update_color(red)
 
     '''def update_display(self):
         
