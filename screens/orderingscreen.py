@@ -9,12 +9,16 @@ blue = (0, 0, 255)
 green = (0, 255, 0)
 red = (255, 0, 0)
 black = (0, 0, 0)
-
+circleX = 100
+circleY = 100
+radius = 20
 class OrderingScreen(Screen):
     
     def __init__(self):
         super().__init__('Ordering')
         #super().update_color(red)
+        pygame.draw.circle(OrderingScreen, white, (circleX,circleY), radius) 
+
 
     '''def update_display(self):
         
